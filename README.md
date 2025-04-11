@@ -16,7 +16,7 @@ This playbook demonstrates a production-grade analytic rule in Microsoft Sentine
 
 ## 📌 Detection Rule: Public Blob Access
 
-- **Log Source**: AzureDiagnostics (BlobStorage category)
+- **Log Source**: AzureDiagnostics (BlobStorage category) 
 - **Operation Monitored**: PutBlob
 - **Trigger**: Any blob upload with public access
 - **Frequency**: Every 5 minutes
