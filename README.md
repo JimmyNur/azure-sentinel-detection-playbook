@@ -28,7 +28,7 @@ This playbook demonstrates a production-grade analytic rule in Microsoft Sentine
 
 ## 📂 Files
 
-- [`sentinel/analytics-rule-blob-access.json`](sentinel/analytics-rule-blob-access.json): Sentinel detection rule template
+- [`sentinel/analytics-rule-blob-access.json`](https://docs.google.com/document/d/1pfmsuFUVjY5S9P2jZDUp1yHWmoj8GnYeqQvO3o-7kiA/edit?usp=sharing): Sentinel detection rule template
 - `docs/rule-overview.png`: Screenshot of rule setup https://docs.google.com/document/d/1fxXPrNG5Ix5xVj0O1Bdh12vsZ90O-9SOZi9FIqMJEDw/edit?usp=sharing
 - `docs/run-result.png`: Screenshot of successful detection/trigger
 
