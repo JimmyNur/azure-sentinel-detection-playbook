@@ -1,4 +1,4 @@
-# 🛡️ Azure Sentinel Detection Playbook
+# 🛡️ Azure Sentinel 
 
 This project showcases a production-ready analytic rule in Microsoft Sentinel designed to detect unauthorized public access to Azure Blob Storage. Upon detection, it triggers an automated incident response via Azure Logic Apps, ensuring swift mitigation.
 
