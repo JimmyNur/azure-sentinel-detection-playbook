@@ -46,27 +46,38 @@ This playbook demonstrates a production-grade analytic rule in Microsoft Sentine
 
 ---
 
-## 🚀 How to Deploy
+## 🛠️ How to Deploy
 
-1. Upload JSON to your Sentinel Workspace (Analytics → Create → Import rule)
-2. Confirm linked Log Analytics workspace is ingesting Blob Storage logs
-3. Attach Logic App under "Automated response"
-4. Test by uploading public blob and monitor trigger
+Follow these steps to deploy the Azure Sentinel Detection Playbook:
+
+1. **Import the Analytics Rule:**
+   - Navigate to Microsoft Sentinel > Analytics > Create > Import from JSON
+   - Upload the `analytics-rule-blob-access.json` file found in the `sentinel/` directory.
+
+2. **Configure Logic App Automation:**
+   - Ensure that the Logic App linked to the detection rule is properly configured and has the necessary permissions.
+   - Test the Logic App by triggering an alert manually.
+
+3. **Testing the Detection:**
+   - Simulate a blob upload with public access using PowerShell or Azure CLI.
+   - Verify that the detection rule triggers an alert and the Logic App fires correctly.
 
 ## 🚀 Deployment Guide
 
 1. **Import the Analytic Rule:**
    - Navigate to Microsoft Sentinel > Analytics > Create > Import from JSON
-   - Upload `analytics-rule-blob-access.json`
+   - Upload `sentinel/analytics-rule-blob-access.json`
 
-2. **Configure the Logic App:**
-   - Ensure the Logic App is set up to handle the triggered alerts appropriately.
+2. **Set Up the Logic App:**
+   - Deploy the Logic App using `logic-app/blob-access-response.json`
+   - Ensure it has the necessary permissions and is connected to the Sentinel workspace
 
 3. **Testing:**
-   - Simulate a public blob upload to verify the detection and automated response.
+   - Simulate a public blob access to trigger the rule
+   - Verify that the Logic App executes as expected
 
 
-6. ## 🔍 Features
+ ## 🔍 Features
 
 - **Log Source:** AzureDiagnostics (BlobStorage category)
 - **Monitored Operation:** PutBlob
@@ -75,6 +86,10 @@ This playbook demonstrates a production-grade analytic rule in Microsoft Sentine
 - **Severity Level:** High
 - **MITRE ATT&CK Tactic:** Initial Access
 - **Automated Response:** Integration with Azure Logic App for immediate action
+
+## Reference 
+- [`sentinel/analytics-rule-blob-access.json`](sentinel/analytics-rule-blob-access.json)
+- [`docs/rule-overview.png`](docs/rule-overview.png)
 
 
 ## 📄 License
